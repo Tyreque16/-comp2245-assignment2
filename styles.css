@@ -1,0 +1,211 @@
+/* |--------------------------------------------------------------------------
+| DEFAULT STYLES
+|--------------------------------------------------------------------------
+*/
+body {
+    font-size: 18px;
+    color: #2D3748;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif;
+    margin: 0; 
+    padding: 0;
+    line-height: 1.6;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* |--------------------------------------------------------------------------
+| FLEXBOX LAYOUT
+|--------------------------------------------------------------------------
+*/
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.content-wrapper {
+    display: flex; /* Arranges main and sidebar horizontally */
+    flex-grow: 1; 
+}
+
+/* Main Content takes 2/3 width (flex: 2) */
+.main-content { 
+    flex: 2 1 0%; 
+    padding: 30px; 
+}
+
+/* Sidebar takes 1/3 width (flex: 1) and is right-aligned */
+.sidebar { 
+    flex: 1 1 0%; 
+    padding: 30px 20px; 
+    border-left: 1px solid #EDF2F7;
+    text-align: right; /* ALIGN SIDEBAR CONTENT RIGHT */
+}
+
+/* |--------------------------------------------------------------------------
+| HEADER STYLES
+|--------------------------------------------------------------------------
+*/
+.header {
+    background-color: #63B3ED; 
+    color: #FFFFFF; 
+    padding: 25px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 30px;
+}
+
+.header h1 {
+    font-size: 36px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5px;
+}
+
+.profile-img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.5); 
+}
+
+/* |--------------------------------------------------------------------------
+| MAIN CONTENT (Blog Posts)
+|--------------------------------------------------------------------------
+*/
+.blog-post {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EDF2F7;
+    overflow: auto; /* Clears floats */
+}
+
+.blog-post h2 {
+    font-size: 32px; 
+    color: #48BB78; 
+    margin-top: 0;
+}
+
+.post-meta {
+    color: #718096; 
+    font-style: italic;
+    margin-top: -10px; 
+    margin-bottom: 15px;
+}
+
+.blog-post img {
+    width: 180px; 
+    height: auto;
+}
+
+.post-image-left {
+    float: left; 
+    margin: 5px 20px 10px 0;
+}
+
+.post-image-right {
+    float: right;
+    margin: 5px 0 10px 20px;
+}
+
+/* |--------------------------------------------------------------------------
+| SIDEBAR STYLES
+|--------------------------------------------------------------------------
+*/
+/* General sidebar section spacing */
+.sidebar-section {
+    margin-bottom: 30px;
+    overflow: hidden; 
+}
+
+/* Sidebar headings */
+.sidebar h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    margin-top: 0;
+    border-bottom: 2px solid #EDF2F7;
+    padding-bottom: 5px;
+    text-align: left; /* Ensure left alignment */
+}
+
+/* Social Media & Archives headings */
+.sidebar .social-media h3,
+.sidebar .archives h3 {
+    color: #48BB78; /* Green color for Social Media and Archives */
+}
+
+/* About section heading */
+.about-section h3 {
+    color: #000000; /* Black for About heading */
+}
+
+/* About section container */
+.about-section {
+    background-color: #E2E8F0; 
+    padding: 20px; 
+    border-radius: 4px;
+    text-align: left; /* Ensure content inside About is left-aligned */
+}
+
+/* Sidebar links */
+.sidebar a {
+    color: #4299E1;
+    text-decoration: none;
+    text-align: left; /* Links left-aligned */
+    display: block; /* Each link on its own line */
+}
+
+
+/* |--------------------------------------------------------------------------
+| FOOTER STYLES
+|--------------------------------------------------------------------------
+*/
+.footer {
+    background-color: #2C5282; 
+    color: #FFFFFF; 
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* |--------------------------------------------------------------------------
+| RESPONSIVENESS
+|--------------------------------------------------------------------------
+*/
+@media (max-width: 800px) {
+    .content-wrapper {
+        flex-direction: column; 
+    }
+
+    .main-content, .sidebar {
+        flex: 1 1 100%;
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .blog-post img {
+        float: none; 
+        display: block;
+        margin: 10px auto; 
+    }
+    
+    .sidebar {
+        border-left: none; 
+        border-top: 1px solid #EDF2F7;
+        text-align: left; 
+    }
+
+    .sidebar h3 {
+        float: none;
+        clear: none;
+        display: block;
+        text-align: left; 
+    }
+}
