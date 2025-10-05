@@ -118,36 +118,48 @@ body {
 | SIDEBAR STYLES
 |--------------------------------------------------------------------------
 */
+/* General sidebar section spacing */
 .sidebar-section {
     margin-bottom: 30px;
     overflow: hidden; 
 }
 
+/* Sidebar headings */
 .sidebar h3 {
     font-family: Georgia, 'Times New Roman', Times, serif; 
     margin-top: 0;
-    display: inline-block; 
-    float: right; 
-    clear: right; 
     border-bottom: 2px solid #EDF2F7;
     padding-bottom: 5px;
-    color: #48BB78; /* Default green for social media and archives */
+    text-align: left; /* Ensure left alignment */
 }
 
+/* Social Media & Archives headings */
+.sidebar .social-media h3,
+.sidebar .archives h3 {
+    color: #48BB78; /* Green color for Social Media and Archives */
+}
+
+/* About section heading */
 .about-section h3 {
-    color: #000000; /* Overrides for the black 'About' title */
+    color: #000000; /* Black for About heading */
 }
 
+/* About section container */
 .about-section {
     background-color: #E2E8F0; 
     padding: 20px; 
     border-radius: 4px;
+    text-align: left; /* Ensure content inside About is left-aligned */
 }
 
+/* Sidebar links */
 .sidebar a {
     color: #4299E1;
     text-decoration: none;
+    text-align: left; /* Links left-aligned */
+    display: block; /* Each link on its own line */
 }
+
 
 /* |--------------------------------------------------------------------------
 | FOOTER STYLES
